@@ -26,9 +26,9 @@ implementation 'org.springframework.boot:spring-boot-starter-validation' // vali
 
 ​요즘은 VO 에서 간편하게 유효성 검사를 처리한다.
 
-@NotNull  - null 일때 나올 message 
-@NotEmpty - Empty 일때 나올 message 
-@Size - min 부터 max 까지  , message 
+@NotNull  - null 일때 나올 message /
+@NotEmpty - Empty 일때 나올 message /
+@Size - min 부터 max 까지  , message /
 
 # 요즘 VO 에서 유효성 검사를 처리 하는게 보편적이다.
 
