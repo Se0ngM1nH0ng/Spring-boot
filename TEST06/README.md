@@ -1,6 +1,6 @@
 # Spring boot [ Mybatis ] 실습
 
-MyBatis 설정 순서 정리
+   MyBatis 설정 순서 정리
 
 1. starter project 할때에 MyBatis 추가하기
 
