@@ -37,7 +37,7 @@ public class CTRL {
 	@RequestMapping("/login")
 	public String login(MemberDTO mDTO, BoardDTO bDTO,HttpSession session, Model model) { // 로그인 수행 
 
-	mDTO.setSk("INFO");
+	mDTO.setSk("INFO"); // 서치 키워드 작성
 		mDTO =memberService.selectOne(mDTO); // 로그인을 위해 DB에 존재하는지 확인
 
 		if(mDTO != null) { // 있다면
@@ -67,7 +67,7 @@ public class CTRL {
 	@RequestMapping(value= "/signup" , method = RequestMethod.POST)
 	public String signup(MemberDTO mDTO, Model model) { // 회원 가입 정보 기입 후 성공 실패 
 
-		mDTO.setSk("SIGN");
+		mDTO.setSk("SIGN"); // 서치 키워드 작성 
 		MemberDTO mdata = memberService.selectOne(mDTO); // 중복검사
 		if(mdata == null) { // 다른 중복되는 아이디가 없다면 
 			memberService.insert(mDTO); // 정보를 등록 해준다. 
