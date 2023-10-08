@@ -48,8 +48,8 @@ public class CTRL {
 	
 	// 컨트롤러가 동작했을때 이미 validator 가  동작 될 수 있도록 
 	@InitBinder // 이런 어노테이션을 사용하기 위해 gradle 에 추가 한거다. 
-	   protected void initBinder(WebDataBinder wdb) {
-	      wdb.setValidator(new VOValidator());  
+	   protected void initBinder(WebDataBinder wdb) { // 요즘은 이것도 잘 안쓰는 방식 !
+	      wdb.setValidator(new VOValidator());        // 이제 VO 에서 처리한다. 
 	   } 
 	
 	
