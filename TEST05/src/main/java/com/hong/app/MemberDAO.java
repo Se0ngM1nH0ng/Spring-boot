@@ -35,9 +35,9 @@ public class MemberDAO implements InterfaceMemberDAO {
 			
 				try {
 					if(mDTO.getSk().equals("INFO")) {
-					Object[] args= {mDTO.getMid(), mDTO.getMpw()};
+					Object[] args= {mDTO.getMid(), mDTO.getMpw()}; // 로그인
 					return jdbcTemplate.queryForObject(SELECTONE_INFO, args, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
-					}else if(mDTO.getSk().equals("SIGN")) {
+					}else if(mDTO.getSk().equals("SIGN")) { // 중복검사
 					Object[] args= {mDTO.getMid()};
 					return jdbcTemplate.queryForObject(SELECTONE_SIGN, args, new BeanPropertyRowMapper<MemberDTO>(MemberDTO.class));
 					}
