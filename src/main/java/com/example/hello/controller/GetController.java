@@ -17,4 +17,9 @@ public class GetController {
     public String getVariable2(@PathVariable("variable") String var) {
         return var;
     }
+
+    @GetMapping
+    public String test(){
+
+    }
 }
